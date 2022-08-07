@@ -2446,16 +2446,6 @@ p1.__proto__.constructor // Person
 Person.prototype.constructor  // Person
 ```
 
-```javascript
-p.__proto__  // Person.prototype
-Person.prototype.__proto__  // Object.prototype
-p.__proto__.__proto__ //Object.prototype
-p.__proto__.constructor.prototype.__proto__ // Object.prototype
-Person.prototype.constructor.prototype.__proto__ // Object.prototype
-p1.__proto__.constructor // Person
-Person.prototype.constructor  // Person
-```
-
 ### 4. 原型链的终点是什么？如何打印出原型链的终点？
 
 由于`Object`是构造函数，原型链终点是`Object.prototype.__proto__`，而`Object.prototype.__proto__=== null // true`，所以，原型链的终点是`null`。原型链上的所有原型都是对象，所有的对象最终都是由`Object`构造的，而`Object.prototype`的下一级是`Object.prototype.__proto__`。
